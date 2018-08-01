@@ -3,9 +3,64 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GeeksForGeeks", "GeeksForGeeks", "{F2201EBF-DA5A-4EC3-9792-B27D10F2380D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HackerEarth", "HackerEarth", "{AC80BE82-5D86-4DC6-B0BC-C46764CEC9A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pragim", "Pragim", "{4669B72C-E2FD-432B-92FC-3950A42678CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Miscellaneous", "Miscellaneous", "{03BE8293-BBE6-49D4-B6DD-6AC2B3194645}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayRotation", "ArrayRotation\ArrayRotation.csproj", "{DB8A0E3D-132B-4C5C-9D46-78ACFFF19C8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayRotationCount", "ArrayRotationCount\ArrayRotationCount.csproj", "{907A5C46-2CE2-4FE2-AD86-8ADBA1231131}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayRotationReversalAlogorithm", "ArrayRotationReversalAlogorithm\ArrayRotationReversalAlogorithm.csproj", "{D1001096-B7EA-4E57-B14C-6D9A54FB3964}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch", "BinarySearch\BinarySearch.csproj", "{371DBAA0-25F5-4992-AC68-EF0A11404EC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesignPattern", "DesignPattern", "{EE61926E-075C-4588-AA2E-10B460C335D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OnlineTest", "OnlineTest", "{03B44D27-0E19-40AC-96F1-2CAD2FB02091}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallestStudent", "TallestStudent\TallestStudent.csproj", "{36B8754C-F40B-4D09-A6D7-F1BA04D88038}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB8A0E3D-132B-4C5C-9D46-78ACFFF19C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB8A0E3D-132B-4C5C-9D46-78ACFFF19C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB8A0E3D-132B-4C5C-9D46-78ACFFF19C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB8A0E3D-132B-4C5C-9D46-78ACFFF19C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{907A5C46-2CE2-4FE2-AD86-8ADBA1231131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{907A5C46-2CE2-4FE2-AD86-8ADBA1231131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{907A5C46-2CE2-4FE2-AD86-8ADBA1231131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{907A5C46-2CE2-4FE2-AD86-8ADBA1231131}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1001096-B7EA-4E57-B14C-6D9A54FB3964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1001096-B7EA-4E57-B14C-6D9A54FB3964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1001096-B7EA-4E57-B14C-6D9A54FB3964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1001096-B7EA-4E57-B14C-6D9A54FB3964}.Release|Any CPU.Build.0 = Release|Any CPU
+		{371DBAA0-25F5-4992-AC68-EF0A11404EC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{371DBAA0-25F5-4992-AC68-EF0A11404EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{371DBAA0-25F5-4992-AC68-EF0A11404EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{371DBAA0-25F5-4992-AC68-EF0A11404EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B8754C-F40B-4D09-A6D7-F1BA04D88038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B8754C-F40B-4D09-A6D7-F1BA04D88038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B8754C-F40B-4D09-A6D7-F1BA04D88038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B8754C-F40B-4D09-A6D7-F1BA04D88038}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DB8A0E3D-132B-4C5C-9D46-78ACFFF19C8B} = {F2201EBF-DA5A-4EC3-9792-B27D10F2380D}
+		{907A5C46-2CE2-4FE2-AD86-8ADBA1231131} = {F2201EBF-DA5A-4EC3-9792-B27D10F2380D}
+		{D1001096-B7EA-4E57-B14C-6D9A54FB3964} = {F2201EBF-DA5A-4EC3-9792-B27D10F2380D}
+		{371DBAA0-25F5-4992-AC68-EF0A11404EC4} = {F2201EBF-DA5A-4EC3-9792-B27D10F2380D}
+		{36B8754C-F40B-4D09-A6D7-F1BA04D88038} = {03B44D27-0E19-40AC-96F1-2CAD2FB02091}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4300C941-7B95-44B2-A219-231CBBEC14B6}
