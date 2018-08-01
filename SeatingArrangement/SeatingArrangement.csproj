@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{36B8754C-F40B-4D09-A6D7-F1BA04D88038}</ProjectGuid>
+    <ProjectGuid>{2ECC763B-FE6A-48D3-85E5-B78D2B4A1BE5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TallestStudent</RootNamespace>
-    <AssemblyName>TallestStudent</AssemblyName>
+    <RootNamespace>SeatingArrangement</RootNamespace>
+    <AssemblyName>SeatingArrangement</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TallestStudent.cs" />
+    <Compile Include="SeatingArrangement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{36B8754C-F40B-4D09-A6D7-F1BA04D88038}</ProjectGuid>
+    <ProjectGuid>{196F9BD4-901B-4139-955F-A0EF7C118CA1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TallestStudent</RootNamespace>
-    <AssemblyName>TallestStudent</AssemblyName>
+    <RootNamespace>PrimeNumber</RootNamespace>
+    <AssemblyName>PrimeNumber</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TallestStudent.cs" />
+    <Compile Include="PrimeNumber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
