@@ -1,0 +1,83 @@
+﻿@model IEnumerable<AWS_EC2_StatusCheck.Models.InstanceDetails>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @*@Html.ActionLink("Create New", "Create")*@
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.InstanceId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InstanceState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InstanceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InstanceStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SystemState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SystemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SystemStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvailablityZone)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstanceId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstanceState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstanceName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstanceStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SystemState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SystemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SystemStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvailablityZone)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |*@
+                @Html.ActionLink("Terminate", "Terminate", new { instanceId = item.InstanceId }) |
+                @*@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
