@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AutoMapper;
+using AWS_UX.Processor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +15,7 @@ namespace AWS_UX
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            MapProfile.RegisterMaps();
         }
     }
 }
