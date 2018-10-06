@@ -15,7 +15,7 @@ namespace AWS_EC2_StatusCheck.Controllers
 
             List<InstanceDetails> instanceDetails = new List<InstanceDetails>();
 
-            instanceDetails.Add(statusCheck.StatusCheckDetails("i-05f5bb881b0df3c15"));
+            instanceDetails.Add(statusCheck.StatusCheckDetails("i-0602ddcf7c609a564"));
 
             return View(instanceDetails);
         }

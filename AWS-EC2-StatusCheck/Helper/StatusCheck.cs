@@ -14,7 +14,7 @@ namespace AWS_EC2_StatusCheck.Helper
 
             try
             {
-                AWSCredentials credentials = new StoredProfileAWSCredentials("FirstProfile");
+                AWSCredentials credentials = new StoredProfileAWSCredentials("Kal19yan-FirstUser");
 
                 var ec2Client = new AmazonEC2Client(credentials, Amazon.RegionEndpoint.USEast1);
 
