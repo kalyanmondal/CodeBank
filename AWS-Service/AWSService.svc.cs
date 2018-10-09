@@ -1,20 +1,22 @@
 ﻿using Amazon.EC2;
 using Amazon.EC2.Model;
 using Amazon.Runtime;
-using AWS_EC2_StatusCheck.Models;
+using AWS_Service.Data;
 using System;
 
-namespace AWS_EC2_StatusCheck.Helper
+namespace AWS_Service
 {
-    public class StatusCheck
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
+    // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
+    public class AWSService : IAWSService
     {
-        public InstanceDetails StatusCheckDetails(string instanceId)
+        public InstanceDetails GetInstanceDetails(string instanceId)
         {
             InstanceDetails instanceDetail = null;
 
             try
             {
-                AWSCredentials credentials = new StoredProfileAWSCredentials("Kal19yan-FirstUser");
+                AWSCredentials credentials = new StoredProfileAWSCredentials("FirstProfile");
 
                 var ec2Client = new AmazonEC2Client(credentials, Amazon.RegionEndpoint.USEast1);
 
@@ -25,7 +27,7 @@ namespace AWS_EC2_StatusCheck.Helper
                     InstanceIds = { instanceId }
                 };
 
-                
+
 
                 var status = ec2Client.DescribeInstanceStatus(statusRequest).InstanceStatuses[0];
 
@@ -40,31 +42,12 @@ namespace AWS_EC2_StatusCheck.Helper
                 instanceDetail.SystemStatus = status.SystemStatus.Details[0].Status;
                 instanceDetail.AvailablityZone = status.AvailabilityZone;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
 
             return instanceDetail;
-        }
-
-        public void Terminate(string instanceId)
-        {
-            var ec2Client = new AmazonEC2Client(Amazon.RegionEndpoint.USEast1);
-
-            var deleteRequest = new TerminateInstancesRequest()
-            {
-                InstanceIds = { instanceId }
-            };
-
-            var deleteResponse = ec2Client.TerminateInstances(deleteRequest);
-
-            foreach (InstanceStateChange item in deleteResponse.TerminatingInstances)
-            {
-                Console.WriteLine();
-                Console.WriteLine("Terminated instance: " + item.InstanceId);
-                Console.WriteLine("Instance state: " + item.CurrentState.Name);
-            }
         }
     }
 }
