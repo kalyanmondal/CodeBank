@@ -1,43 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using log4net;
+using System;
 using System.Web.Mvc;
-using System.Diagnostics;
 using System.Web.Routing;
 
 namespace MVCDemo.Helper
 {
     public class LogAttribute : ActionFilterAttribute
     {
+        private static readonly ILog log = LogManager.GetLogger(typeof(LogAttribute));
+
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            Log("OnActionExecuted", filterContext.RouteData);
+            log.Debug(generateMessage("OnActionExecuted", filterContext.RouteData));
         }
 
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            Log("OnActionExecuting", filterContext.RouteData);
+            log.Debug(generateMessage("OnActionExecuting", filterContext.RouteData));
         }
 
         public override void OnResultExecuted(ResultExecutedContext filterContext)
         {
-            Log("OnResultExecuted", filterContext.RouteData);
+            log.Debug(generateMessage("OnResultExecuted", filterContext.RouteData));
         }
 
         public override void OnResultExecuting(ResultExecutingContext filterContext)
         {
-            Log("OnResultExecuting ", filterContext.RouteData);
+            log.Debug(generateMessage("OnResultExecuting ", filterContext.RouteData));
         }
 
-        private void Log(string methodName, RouteData routeData)
+        private string generateMessage(string methodName, RouteData routeData)
         {
             var controllerName = routeData.Values["controller"];
             var actionName = routeData.Values["action"];
-            var message = String.Format("{0}- controller:{1} action:{2}", methodName,
-                                                                        controllerName,
-                                                                        actionName);
-            Debug.WriteLine(message);
+            return String.Format("{0}- controller:{1} action:{2}", methodName, controllerName, actionName);
         }
     }
 }

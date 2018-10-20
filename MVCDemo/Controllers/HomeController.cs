@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using MVCDemo.Helper;
 using System.Web.Mvc;
-using MVCDemo.Helper;
 
 namespace MVCDemo.Controllers
 {
@@ -11,9 +7,9 @@ namespace MVCDemo.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public string Index()
+        public ActionResult Index()
         {
-            return "Hello from MVC Application!";
+            return View();
         }
     }
 }
