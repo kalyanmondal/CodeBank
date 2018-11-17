@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,40 +12,55 @@ namespace CodeTester
     {
         static void Main(string[] args)
         {
-            ////string[] names = { "Flag", "Nest", "Cup", "Burg", "Yatch", "Next" };
+            ////Database.SetInitializer<EmployeeDBContext>(null);
+            ////////Database.SetInitializer(new EmployeeDBContextSeeder());
+            ////EmployeeDBContext employeeDBContext = new EmployeeDBContext();
+            ////List<Employee> employees = employeeDBContext.Employees.ToList();
 
-            ////for (int i = 0; i < names.Length; i++)
+            ////foreach(Employee e in employees)
             ////{
-            ////    var x = names[i];
-            ////    var j = i;
-            ////    while (j > 0 && names[j - 1].CompareTo(x) > 0)
-            ////    {
-            ////        names[j] = names[j - 1];
-            ////        j = j - 1;
-            ////    }
-            ////    names[j] = x;
+            ////    Console.Write("{0} --> {1} --> {2} --> {3} --> {4}", e.Id, e.FirstName, e.LastName, e.Gender, e.Salary);
+            ////    Console.WriteLine();
+            ////    Console.ReadLine();
             ////}
-            ////Console.ReadKey();
 
+            Employee e = new Employee()
+            {
+                FirstName = "FN",
+                LastName = "LN",
+                Gender = "M",
+                Salary = 10000,
+                Id = 1,
+                MyProperty = 1,
+            };
 
-            test();
+            var settings = new JsonSerializerSettings()
+            {
+                NullValueHandling = NullValueHandling.Include,
+                TypeNameHandling = TypeNameHandling.All,
+                TypeNameAssemblyFormatHandling = TypeNameAssemblyFormatHandling.Full
+            };
+
+            string a = JsonConvert.SerializeObject(e, settings);
+            string b = JsonConvert.SerializeObject(e);
         }
 
-        public static string test()
+        private class EmployeeDBContextSeeder : DropCreateDatabaseIfModelChanges<EmployeeDBContext>
         {
-            try
+            protected override void Seed(EmployeeDBContext context)
             {
-                Console.Write("A");
-                return "ABC";
-            }
-            catch (Exception ex)
-            {
-                Console.Write("B");
-                return "ABC";
-            }
-            finally
-            {
-                Console.Write("C");
+                Employee employee = new Employee()
+                {
+                    FirstName = "FN",
+                    LastName = "LN",
+                    Gender = "M",
+                    Salary = 10000,
+                    MyProperty = 500
+                };
+
+                context.Employees.Add(employee);
+
+                base.Seed(context);
             }
         }
     }
