@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace CodeTester
+namespace EmployeeDataAccess
 {
     public class EmployeeDBContext :DbContext
     {

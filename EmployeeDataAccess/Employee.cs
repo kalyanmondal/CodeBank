@@ -1,4 +1,4 @@
-﻿namespace CodeTester
+﻿namespace EmployeeDataAccess
 {
     public class Employee
     {
