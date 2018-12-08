@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
+using WebApiContrib.Formatting.Jsonp;
 
 namespace WebAPIDemo
 {
@@ -19,6 +17,18 @@ namespace WebAPIDemo
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.EnableCors();
+
+            ////config.Filters.Add(new RequiredHttpsAttribute());
+
+            ////config.Formatters.JsonFormatter.SerializerSettings.TypeNameHandling = Newtonsoft.Json.TypeNameHandling.All;
+            ////config.Formatters.JsonFormatter.SerializerSettings.TypeNameAssemblyFormatHandling = Newtonsoft.Json.TypeNameAssemblyFormatHandling.Full;
+            ////config.Formatters.JsonFormatter.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented;
+            ////config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
+            ////var jsonpFormatter = new JsonpMediaTypeFormatter(config.Formatters.JsonFormatter);
+            ////config.Formatters.Insert(0, jsonpFormatter);
         }
     }
 }

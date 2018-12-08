@@ -14,5 +14,20 @@ namespace WebAPIDemo.Controllers
         {
             return strings;
         }
+
+        public string Get(int id)
+        {
+            return strings[id];
+        }
+
+        public void Post(int id, [FromBody] string value)
+        {
+            strings[id] = value;
+        }
+
+        public void Delete(int id)
+        {
+            strings.RemoveAt(id);
+        }
     }
 }

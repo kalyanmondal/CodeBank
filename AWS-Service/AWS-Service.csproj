@@ -45,7 +45,7 @@
       <HintPath>..\packages\AWSSDK.Core.3.3.29.12\lib\net45\AWSSDK.Core.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.EC2, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
-      <HintPath>..\packages\AWSSDK.EC2.3.3.71.2\lib\net45\AWSSDK.EC2.dll</HintPath>
+      <HintPath>..\packages\AWSSDK.EC2.3.3.75\lib\net45\AWSSDK.EC2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -94,7 +94,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\packages\AWSSDK.EC2.3.3.71.2\analyzers\dotnet\cs\AWSSDK.EC2.CodeAnalysis.dll" />
+    <Analyzer Include="..\packages\AWSSDK.EC2.3.3.75\analyzers\dotnet\cs\AWSSDK.EC2.CodeAnalysis.dll" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
