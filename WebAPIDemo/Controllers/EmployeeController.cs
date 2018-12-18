@@ -49,6 +49,7 @@ namespace WebAPIDemo.Controllers
             }
         }
 
+        [EnableCorsAttribute("*", "*", "*")]
         [HttpPost]
         public HttpResponseMessage CreateEmployee([FromBody] Employee employee)
         {

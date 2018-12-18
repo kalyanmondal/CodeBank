@@ -2,7 +2,6 @@
     var ulEmployee = $('#ulEmployess');
 
     $('#btnGetEmployee').click(function () {
-
         $.ajax({
             type: 'GET',
             url: 'http://localhost:6120/api/Employee/',
