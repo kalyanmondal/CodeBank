@@ -2,28 +2,24 @@
 {
     class Math : IMath
     {
-        public string Add(double a, double b, out double c)
+        public double Add(double a, double b)
         {
-            c = a + b;
-            return "You have access!";
+            return a + b;
         }
 
-        public string Div(double a, double b, out double c)
+        public double Div(double a, double b)
         {
-            c = a / b;
-            return "You have access!";
+            return a / b;
         }
 
-        public string Mul(double a, double b, out double c)
+        public double Mul(double a, double b)
         {
-            c = a * b;
-            return "You have access!";
+            return a * b;
         }
 
-        public string Sub(double a, double b, out double c)
+        public double Sub(double a, double b)
         {
-            c = a - b;
-            return "You have access!";
+            return a - b;
         }
     }
 }

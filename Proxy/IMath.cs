@@ -2,12 +2,12 @@
 {
     interface IMath
     {
-        string Add(double a, double b, out double c);
+        double Add(double a, double b);
 
-        string Sub(double a, double b, out double c);
+        double Sub(double a, double b);
 
-        string Mul(double a, double b, out double c);
+        double Mul(double a, double b);
 
-        string Div(double a, double b, out double c);
+        double Div(double a, double b);
     }
 }
