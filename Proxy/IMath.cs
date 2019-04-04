@@ -1,4 +1,4 @@
-﻿namespace Proxy
+﻿namespace StructuralPatterns.Proxy
 {
     interface IMath
     {

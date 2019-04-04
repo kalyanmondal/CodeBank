@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Proxy
+namespace StructuralPatterns.Proxy
 {
     class Program
     {
@@ -8,13 +8,13 @@ namespace Proxy
         {
             MathProxy mathProxy = new MathProxy();
 
-            Console.WriteLine("Add (4,2) : - " + mathProxy.Add(4, 2));
+            Console.WriteLine("Add (4,2) : -> " + mathProxy.Add(4, 2));
 
-            Console.WriteLine("Sub (4,2) : - " + mathProxy.Sub(4, 2));
+            Console.WriteLine("Sub (4,2) : -> " + mathProxy.Sub(4, 2));
 
-            Console.WriteLine("Mul (4,2) : - " + mathProxy.Mul(4, 2));
+            Console.WriteLine("Mul (4,2) : -> " + mathProxy.Mul(4, 2));
 
-            Console.WriteLine("Div (4,2) : - " + mathProxy.Div(4, 2));
+            Console.WriteLine("Div (4,2) : -> " + mathProxy.Div(4, 2));
 
             Console.ReadKey();
         }

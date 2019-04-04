@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ChainOfResponsibility
+namespace BehavioralPatterns.ChainOfResponsibility
 {
     class President : Approver
     {

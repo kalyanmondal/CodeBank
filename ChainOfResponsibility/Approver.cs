@@ -1,4 +1,4 @@
-﻿namespace ChainOfResponsibility
+﻿namespace BehavioralPatterns.ChainOfResponsibility
 {
     abstract class Approver
     {
