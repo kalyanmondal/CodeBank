@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace CodeTester
 {
@@ -121,13 +122,38 @@ namespace CodeTester
     //    }
     //}
 
+    public class Solution
+    {
+        public int LengthOfLongestSubstring(string s)
+        {
+            int max = s.Length > 0 ? 1 : 0;
+            int pointer = 0;
+            string sub = String.Empty;
+            while (pointer < s.Length)
+            {
+                if (sub.Contains(s[pointer]))
+                {
+                    max = max < sub.Length ? sub.Length : max;
+                    sub = sub.Remove(0, sub.IndexOf(s[pointer]) + 1);
+                }
+                sub += s[pointer];
+                pointer++;
+                if (pointer == s.Length)
+                {
+                    max = max < sub.Length ? sub.Length : max;
+                }
+            }
+            return max;
+        }
+    }
 
     class CandidateCode
     {
         static void Main(String[] args)
         {
-            string val1 = Console.ReadLine();
-            string val2 = Console.ReadLine();
+            Solution s = new Solution();
+
+            s.LengthOfLongestSubstring("abcabcbb");
         }
     }
 }
